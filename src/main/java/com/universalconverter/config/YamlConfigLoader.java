@@ -16,7 +16,6 @@ public final class YamlConfigLoader {
     public ConversionConfig load(Path path) throws IOException {
         try (InputStream input = Files.newInputStream(path)) { return load(input); }
     }
-    @SuppressWarnings("unchecked")
     public ConversionConfig load(InputStream input) {
         Object loaded = yaml.load(input);
         if (!(loaded instanceof Map<?, ?> map)) throw new IllegalArgumentException("Configuration must be a YAML mapping");
