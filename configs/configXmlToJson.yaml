@@ -1,0 +1,3 @@
+source: input.xml
+target: output.json
+type: xml-to-json

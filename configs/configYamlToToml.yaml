@@ -1,0 +1,3 @@
+source: input.yaml
+target: output.toml
+type: yaml-to-toml

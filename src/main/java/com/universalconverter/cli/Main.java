@@ -33,5 +33,5 @@ public final class Main {
         return Path.of(value);
     }
     private static void usage() { System.err.println("Usage: java -jar universal-converter-1.0.0.jar <config.yaml> [input-file] [output-file]"); }
-    private static ConverterRegistry registry() { return new ConverterRegistry().register(new CsvToJsonConverter()).register(new JsonToCsvConverter()).register(new XmlToJsonConverter()).register(new YamlToJsonConverter()).register(new YamlToTomlConverter()).register(new TomlToYamlConverter()); }
+    private static ConverterRegistry registry() { return new ConverterRegistry().register(new CsvToJsonConverter()).register(new JsonToCsvConverter()).register(new XmlToJsonConverter()).register(new YamlToJsonConverter()).register(new YamlToTomlConverter()).register(new TomlToYamlConverter()).register(new JsonToYamlConverter()); }
 }

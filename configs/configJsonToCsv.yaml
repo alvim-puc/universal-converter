@@ -1,0 +1,3 @@
+source: input.json
+target: output.csv
+type: json-to-csv

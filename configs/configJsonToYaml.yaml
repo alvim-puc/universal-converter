@@ -1,0 +1,3 @@
+source: input.json
+target: output.yaml
+type: json-to-yaml

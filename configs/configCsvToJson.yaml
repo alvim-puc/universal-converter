@@ -1,0 +1,6 @@
+source: input.csv
+target: output.json
+type: csv-to-json
+options:
+  delimiter: ","
+  header: true

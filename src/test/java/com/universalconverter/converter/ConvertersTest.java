@@ -31,5 +31,10 @@ class ConvertersTest {
         ByteArrayOutputStream yaml = new ByteArrayOutputStream(); new TomlToYamlConverter().convert(new ByteArrayInputStream(toml.toByteArray()), yaml, CSV);
         assertTrue(yaml.toString().contains("count: 2"));
     }
+    @Test void convertsJsonToYaml() throws Exception {
+        ByteArrayOutputStream out = new ByteArrayOutputStream(); new JsonToYamlConverter().convert(bytes("{\"name\":\"Ana\",\"age\":24}\n"), out, CSV);
+        assertTrue(out.toString().contains("name: Ana"));
+        assertTrue(out.toString().contains("age: 24"));
+    }
     private static ByteArrayInputStream bytes(String value) { return new ByteArrayInputStream(value.getBytes()); }
 }
